@@ -1,0 +1,67 @@
+ 
+public class HomeController : Controller
+{
+    public ActionResult Index()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public ActionResult Convert(string currency, decimal amount)
+    {
+        decimal result = 0;
+        decimal conversionRate = 0;
+
+        if (currency == "INRtoUSD")
+        {
+            // Conversion rate from INR to USD
+            conversionRate = 0.013m;
+        }
+        else if (currency == "USDtoINR")
+        {
+            // Conversion rate from USD to INR
+            conversionRate = 74.50m;
+        }
+
+        result = amount * conversionRate;
+
+        ViewBag.Result = result;
+
+        return View("Index");
+    }
+}
+
+
+
+@{
+    ViewBag.Title = "Currency Converter";
+}
+
+
+
+<h2>Currency Converter</h2>
+
+<form method="post" action="@Url.Action("Convert", "Home")"> <label for="currency">Select Conversion: </label>
+
+<select id="currency" name="currency">
+
+<option value="INRtoUSD">INR to USD</option>
+
+<option value="USDtoINR">USD to INR</option>
+
+</select><br><br>
+
+<label for="amount">Enter Amount:</label>
+
+<input type="text" id="amount" name="amount" /><br><br>
+
+<input type="submit" value="Convert" />
+
+</form>
+
+@if (ViewBag.Result != null)
+
+{
+    <h3>Result: @ViewBag. Result</h3>
+}
+

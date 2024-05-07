@@ -1,0 +1,42 @@
+@{
+    ViewBag.Title = "Currency Converter";
+}
+
+ 
+
+<div>
+    <h1>Doller to rupee convertor</h1>
+    <input type="number" name="name" value="" id="inValue" />
+    <select id="choose">
+         <option value="USD">USD TO INR</option>
+         <option value="INR">INR to USD</option>
+    </select>
+    <button onclick="Covertvalue()">Convert</button>
+</div>
+
+<h3 id="result"></h3>
+
+<script>
+    function Covertvalue(){
+        const a = parseFloat(document.getElementById("inValue").value);
+        const b = document.getElementById("choose").value;
+        const usdRate = 83.47;
+        const inrRate = 1 / usdRate;
+        if (b === "USD") {
+            result = a * usdRate;
+        }
+        else{ 
+            result = a * inrRate;
+        } 
+        document.getElementById("result").innerText = result;
+    }
+
+</script>
+ 
+
+@if (ViewBag.Result != null)
+
+{
+    <h3>Result: @ViewBag. Result</h3>
+}
+
