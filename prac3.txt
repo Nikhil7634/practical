@@ -1,0 +1,22 @@
+    @PUT
+    @Consumes(MediaType.TEXT_HTML)
+    @Path("/update")
+    public void putHtml(String content) {
+        // Handle the received HTML content
+    }
+
+    @POST
+    @Consumes(MediaType.TEXT_HTML)
+    @Produces(MediaType.TEXT_HTML)
+    @Path("/uppercase")
+    public String toUppercaseMethod(String str) {
+        return str.toUpperCase();
+    }
+
+    @POST
+    @Consumes(MediaType.TEXT_HTML)
+    @Produces(MediaType.TEXT_HTML)
+    @Path("/lowercase")
+    public String toLowercaseMethod(String str) {
+        return str.toLowerCase();
+    }
