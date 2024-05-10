@@ -13,11 +13,11 @@ def calculate_metrics(retrieved_set, relevant_set):
     
     return precision, recall, f_measure
 
-retrieved_set = set(["doc1", "doc2", "doc3"])
-relevant_set = set(["doc1", "doc4"])
+a = set(["doc1", "doc2", "doc3"])
+b = set(["doc1", "doc4"])
 
-precision, recall, f_measure = calculate_metrics(retrieved_set, relevant_set)
+precision, recall, f_measure = calculate_metrics(a, b)
 
-print(f"Precision: {precision}")
+print(precision)
 print(f"Recall: {recall}")
 print(f"F-measure: {f_measure}")

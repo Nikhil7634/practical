@@ -12,8 +12,8 @@ tokens2 = document2.lower().split()
 terms = list(set(tokens1 + tokens2))
 
 inverted_index = {}
-occ_num_doc1 = {}
-occ_num_doc2 = {}
+occ_num_doc1 = {"lazy"}
+occ_num_doc2 = {"dog"}
 
 for term in terms:
     if term in stopWords:
