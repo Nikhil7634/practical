@@ -1,8 +1,0 @@
-go to fixfox
-right click and go to add on
-search tampering data
-
-2) cookie editor
-go to https://the-internet.herokuapp.com/login
-username = tomsmith
-password = SuperSecretePassword

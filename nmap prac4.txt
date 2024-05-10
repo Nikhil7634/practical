@@ -1,5 +1,0 @@
-1)nmap -sA T4 scanme.nmap.org
-2)nmap -p 22,113,139, scanme.nmap.org
-3)"C:\\>nmap" scanme.nmap.org -sf
-4)nmap -sN -p22 scanme.nmap.org
-5)"C:\\>nmap" -sX scanmenmap.org
